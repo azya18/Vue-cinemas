@@ -3,8 +3,11 @@
 }
 @media(max-width:1200px){
     .films__item{
-        flex-wrap: wrap;
-        justify-content: center;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         gap: 20px;
     }
     .films__item-card{
@@ -12,8 +15,13 @@
         min-height: 700px;
     }
     .collections__catalog{
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 20px;      
     }
     .collections__item{
@@ -24,7 +32,8 @@
         background-size: 95% 90%;
     }
     .films__item-cardbg{
-        object-fit: fill;
+        -o-object-fit: fill;
+           object-fit: fill;
     }
 }
 @media(max-width:992px){
@@ -32,33 +41,47 @@
         min-height: 500px;
     }
     .films__item-cardbg{
-        object-fit: fill;
+        -o-object-fit: fill;
+           object-fit: fill;
     }
     .series__collection{
+        -ms-grid-columns: 1fr 15px 1fr 15px 1fr 15px 1fr;
         grid-template-columns: repeat(4,1fr);
         grid-auto-rows: 250px;
         gap: 15px;
     }
     .series__item:nth-of-type(1){
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
         grid-column: 1/3;
     }
     .series__item:nth-of-type(2){
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 2;
         grid-column: 3/5;
     }
     .series__item:nth-of-type(3){
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 2;
         grid-column: 3/5;
     }
     .series__item:nth-of-type(4){
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
         grid-column: 1/3;
     }
     .series__item:nth-of-type(5){
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 2;
         grid-column: 3/5;
     }
     .series__item-bg{
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
     }
     .header__bg{
-        object-fit: fill;
+        -o-object-fit: fill;
+           object-fit: fill;
     }
     .header__content{
         height: 600px;
@@ -76,12 +99,22 @@
         min-height: 450px;
     }
     .header__nav-content{
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     .footer__content{
-        flex-direction: column;
-        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         gap: 10px;
     }
     .header__nav-content{
@@ -94,6 +127,7 @@
 }
 @media(max-width:576px){
     .series__collection{
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         grid-auto-rows: 310px;
     }
@@ -101,11 +135,14 @@
         min-height: 550px;
     }
     .series__item:nth-of-type(n+1){
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
         grid-column: 1/2;
         grid-row: auto;
     }
     .series__item-bg{
-        object-fit: fill;
+        -o-object-fit: fill;
+           object-fit: fill;
     }
     .films__item-card{
         width: 100%;
@@ -136,10 +173,17 @@
         margin: 0 2px;
     }
     .logo{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 80px;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 10px;    
     }
     .logo__text{
@@ -149,6 +193,8 @@
         width: 100%;
     }
     .series__poster{
+        min-height: -webkit-max-content;
+        min-height: -moz-max-content;
         min-height: max-content;
         padding: 10px 5px;
     }
